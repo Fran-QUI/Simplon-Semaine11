@@ -28,10 +28,10 @@ function comparer() {
 
 //afficher le résultat
 function afficher() {
-	$text.innerHTML() = resultat;
+	$text.innerHTML = resultat;
 }
 
-$valider.onclick() = comparer()
+$valider.onclick = comparer;
 
 definirNombreIa();
 afficher();
