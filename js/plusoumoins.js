@@ -2,7 +2,7 @@ var $text = document.getElementById("texteInformation");
 var nombreIa;
 var $nombreJoueur = document.getElementById("nombreJoueur");
 var $valider = document.getElementById("valider");
-var resultat = "entrez un nombre entre 1 et 100";
+var resultat = "L'ordinateur à choisi un chiffre entre 1 et 100. Entrez un nombre entre 1 et 100 pour le trouver.";
 var $btnNouvellePartie = document.getElementById("nouvellePartie");
 var $nombreEssai = document.getElementById("nombreEssai");
 var nombreEssai = 0
@@ -33,14 +33,14 @@ function comparer() {
 	function victoire() {
 		if (nombreEssai == 0) {
 			resultat = "Du premier coup !!! vous avez triché ?"
-		} else if (nombreEssai <= 5) {
-			resultat = "vous avez trouvé au bout de seulement" + (nombreEssai+1) + " coups !!! Avez vous des dons de voyance ?"
-		} else if (nombreEssai <= 10) {
-			resultat = "vous avez trouvé au bout de " + (nombreEssai+1) + " coups !!! Vous semblez avoir des talents de déduction hors norme..."
-		} else if (nombreEssai <= 15) {
-			resultat = "vous avez trouvé au bout de " + (nombreEssai+1) + " coups ! Vous faites trop confiance au hasard !"
+		} else if (nombreEssai <= 4) {
+			resultat = "Vous avez trouvé au bout de seulement " + (nombreEssai+1) + " coups !!! Avez-vous des dons de voyance ?"
+		} else if (nombreEssai <= 9) {
+			resultat = "Vous avez trouvé au bout de " + (nombreEssai+1) + " coups !!! Vous semblez avoir des talents de déduction hors norme..."
+		} else if (nombreEssai <= 14) {
+			resultat = "Vous avez trouvé au bout de " + (nombreEssai+1) + " coups ! Vous faites trop confiance au hasard !"
 		} else {
-			resultat = "vous avez trouvé au bout de " + (nombreEssai+1) + " coups ! Pensez à réfléchir de temps en temps..."
+			resultat = "Vous avez trouvé au bout de " + (nombreEssai+1) + " coups ! Pensez à réfléchir de temps en temps..."
 		}
 		
 	}
