@@ -2,6 +2,7 @@
 
 
 var score = 0;
+var scoreIA = 0;
 var choixIA = "Puit";
 var resultat = "Pas de tirage effectué !";
 var $txtResultat = document.getElementById("txtResultat");
@@ -43,18 +44,19 @@ function compare() {
 	((choixIA === "Ciseaux") && ($chxJoueur === "Pierre"))
 	) 
 	{
-		resultat = "victoire";
+		resultat = "Victoire ! :D";
 		score = score + 1;
 	}
 
 	else if (choixIA === $chxJoueur) {
 
-		resultat = "égalité";
+		resultat = "Egalité ! :/";
 	}
 
 	else 
 	{
-		resultat = "perdu";
+		resultat = "Perdu ! :(";
+		scoreIA = scoreIA + 1;
 	}
 }
 
@@ -64,7 +66,7 @@ function afficherResultat() {
 	compare();
 	$txtChoixIa.innerHTML = "L'I.A. a choisi " + choixIA;
 	$txtResultat.innerHTML = resultat;
-	$txtScore.innerHTML = score;
+	$txtScore.innerHTML = "Vous : " + score + " | IA : " + scoreIA;
 	choisirIA();
 }
 
